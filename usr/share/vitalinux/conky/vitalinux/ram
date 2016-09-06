@@ -1,0 +1,50 @@
+# Conky by Qaisar Nawaz
+# Conky settings #
+background no
+update_interval 1
+double_buffer yes
+no_buffers yes
+
+# Window specifications #
+own_window yes
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_title 
+own_window_colour 333333
+own_window_argb_visual yes
+own_window_argb_value 180
+
+minimum_size 200 26
+maximum_width 200
+
+# Alignment #
+alignment mr
+gap_x 0
+gap_y -40
+
+border_inner_margin 4
+border_outer_margin 0
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont ubuntulight:bold:size=8
+
+override_utf8_locale yes
+
+imlib_cache_size 0
+
+# Color scheme #
+default_color E99443
+color1 ffffff
+color2 E99443
+
+TEXT
+${voffset 4}${image /usr/share/vitalinux/conky/conky_icons/ram.png -s 25x25 -p 0,0}\
+${offset 25}${font ubuntulight:bold:size=10}${color2}$mem / $memmax ${offset 5}${color1}RAM

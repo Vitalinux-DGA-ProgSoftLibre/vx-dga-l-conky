@@ -1,0 +1,14 @@
+Source: vx-dga-l-conky
+Section: utils
+Priority: extra
+Maintainer: Arturo Martín <amartinromero@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: http://wiki.vitalinux.educa.aragon.es
+
+Package: vx-dga-l-conky
+Architecture: all
+Pre-Depends: vx-dga-l-skel-usuarios, compton, vx-dga-l-compton, conky-manager
+Depends: ${misc:Depends}
+Description: Conky personalizado para Lubuntu Vitalinux
+ Conky personalizado para Lubuntu Vitalinux mostrando información del sistema en el Escritorio

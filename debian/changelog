@@ -1,0 +1,14 @@
+vx-dga-l-conky (1.0-5) unstable; urgency=low
+
+  * Conky personalizado para Lubuntu Vitalinux
+  * Añadimos el esqueleto de .conky en el /etc/skel
+  * Mediante AWK filtramos los usuarios que tienen un UID mayor de 999 y su HOME esta en /home/...
+  * Se añade el CID del equipo para que se muestre junto con el rendimiento
+  * Se unifica para todos los usuarios del sistema, indpendiente de la conf en su directorio personal
+  * Nombre del equipo en la información del CID
+  * Nombre de usuario que arranca el sistema
+  * Se ha creado el *.desktop para poder reiniciar el widget conky en cualquier momento
+
+ -- Arturo Martín <amartinromero@gmail.com>  Mon, 25 Jan 2016 07:45:06 +0200
+
+

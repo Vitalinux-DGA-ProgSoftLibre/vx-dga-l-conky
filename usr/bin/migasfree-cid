@@ -1,0 +1,31 @@
+#! /usr/bin/python
+# -*- coding: UTF-8 -*-
+
+# Permissions: root:root 755
+
+__author__ = 'Jose Antonio Chavarría'
+
+import sys
+from distutils.sysconfig import get_python_lib
+
+if not get_python_lib() in sys.path:
+    sys.path.append(get_python_lib())
+
+import os
+import time
+import subprocess
+
+from migasfree_client.utils import get_config, get_hardware_uuid, get_mfc_computer_name 
+from migasfree_client import settings
+
+if __name__ == '__main__':
+    config = get_config(settings.CONF_FILE, 'client')
+    url = 'http://%s/computer_label/?uuid=%s&name=%s' % (config.get('server', 'localhost'), get_hardware_uuid(), get_mfc_computer_name())
+#    command = 
+    if not os.path.exists("/tmp/.cid.html") or os.stat('/tmp/.cid.html').st_size == 0:
+        os.system('wget -t 1 -q -O /tmp/.cid.html ' + url)
+    time.sleep(1)
+    if not os.system('grep -q \<h1\> /tmp/.cid.html'):
+        os.system('grep \<h1\> /tmp/.cid.html | sed -e "s/<[^>]*>//g" | sed "s/^ *//"')
+    else:
+        print('----')

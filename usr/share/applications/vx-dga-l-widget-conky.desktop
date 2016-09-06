@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Restart Desktop Widget
+Name[es]=Reiniciar Widget Escritorio
+Name[es_ES]=Reiniciar Widget Escritorio
+Comment=Allow magnify an area of your screen
+Comment[es]=Permite Magnificar un Área de la Pantalla
+Comment[es_ES]=Permite Magnificar un Área de la Pantalla
+Exec=/usr/bin/inicio-conky
+Icon=widget-conky
+Categories=Sistema;
+Type=Application
+Terminal=false
