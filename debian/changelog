@@ -1,4 +1,10 @@
-vx-dga-l-conky (1.0-5) unstable; urgency=low
+vx-dga-l-conky (1.0-7) unstable; urgency=low
+
+  * La obtención del usuario gráfico se obtiene de forma independiente a quien inicie primero el entorno gráfico ( puede haber dos usuarios con entorno gráfico abierto )
+
+ -- Ignacio Sancho <sannacho@gmail.com>  Mon, 3 May 2017 07:45:06 +0200
+
+vx-dga-l-conky (1.0-6) unstable; urgency=low
 
   * Conky personalizado para Lubuntu Vitalinux
   * Añadimos el esqueleto de .conky en el /etc/skel
@@ -8,6 +14,9 @@ vx-dga-l-conky (1.0-5) unstable; urgency=low
   * Nombre del equipo en la información del CID
   * Nombre de usuario que arranca el sistema
   * Se ha creado el *.desktop para poder reiniciar el widget conky en cualquier momento
+  * 2016-10-28: 1.0-5 -> 1.0-6
+  * Se ha añadido la dependencia con conky-all para que sirva para Lubuntu 16.04
+  * Se ha ajustado la obtención del usuario grafico con grep "(:0)" para ser compatible con Lubuntu 16.04
 
  -- Arturo Martín <amartinromero@gmail.com>  Mon, 25 Jan 2016 07:45:06 +0200
 

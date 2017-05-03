@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # postinst script for vx-dga-l-conky
 #
 # see: dh_installdeb(1)
@@ -35,10 +35,11 @@ case "$1" in
 
 	# Las configuraaciones previas por usuario si las hubiera se habrán borrado con la update
 	# De todas formas "no molestan".
-	USERGRAF=$(who | grep " :0 " | cut -d" " -f1)
-	if [ -n $USERGRAF ]; then
+	#USERGRAF=$(who | grep " :0 " | cut -d" " -f1)
+	USERGRAF=$(vx-usuario-grafico)
+	if [ -n "$USERGRAF" ] && (id "$USERGRAF" &> /dev/null) ; then
 		sleep 2
-		su -c "/usr/bin/inicio-conky &> /dev/null" --login $USERGRAF
+		su -c "/usr/bin/inicio-conky &> /dev/null" --login "$USERGRAF"
 	fi
     ;;
 
