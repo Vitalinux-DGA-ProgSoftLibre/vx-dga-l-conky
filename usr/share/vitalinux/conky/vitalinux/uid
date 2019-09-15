@@ -1,7 +1,7 @@
 # Conky by Qaisar Nawaz
 # Conky settings #
 background no
-update_interval 1
+update_interval 20
 double_buffer yes
 no_buffers yes
 

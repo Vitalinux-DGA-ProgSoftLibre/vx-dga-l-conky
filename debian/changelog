@@ -1,3 +1,16 @@
+vx-dga-l-conky (1.0-9) unstable; urgency=low
+
+  * Lanzador para reiniciar widget -> Preferencias
+  * Ajuste de los tiempos de actualización para no críticos
+
+ -- Ignacio Sancho <sannacho@gmail.com>  Wed, 12 Dec 2018 07:45:06 +0200
+
+vx-dga-l-conky (1.0-8) unstable; urgency=low
+
+  * Salimos en el caso de que se instale el paquete sin inicio de sesión de usuario
+
+ -- Ignacio Sancho <sannacho@gmail.com>  Tue, 25 Sep 2018 07:45:06 +0200
+
 vx-dga-l-conky (1.0-7) unstable; urgency=low
 
   * La obtención del usuario gráfico se obtiene de forma independiente a quien inicie primero el entorno gráfico ( puede haber dos usuarios con entorno gráfico abierto )

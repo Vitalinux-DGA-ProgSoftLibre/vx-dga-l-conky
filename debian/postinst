@@ -39,7 +39,7 @@ case "$1" in
 	USERGRAF=$(vx-usuario-grafico)
 	if [ -n "$USERGRAF" ] && (id "$USERGRAF" &> /dev/null) ; then
 		sleep 2
-		su -c "/usr/bin/inicio-conky &> /dev/null" --login "$USERGRAF"
+		su -c "/usr/bin/inicio-conky &> /dev/null" --login "$USERGRAF" || exit 0
 	fi
     ;;
 

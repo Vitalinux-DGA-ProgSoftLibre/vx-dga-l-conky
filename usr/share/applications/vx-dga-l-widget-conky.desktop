@@ -8,6 +8,6 @@ Comment[es]=Permite Magnificar un Área de la Pantalla
 Comment[es_ES]=Permite Magnificar un Área de la Pantalla
 Exec=/usr/bin/inicio-conky
 Icon=widget-conky
-Categories=Sistema;
+Categories=Settings;
 Type=Application
 Terminal=false
