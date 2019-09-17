@@ -2,11 +2,10 @@
 ## Configuración de Aplicación Conky para Escritorio Vitalinux
 # Cerramos cualquier confguracion que hubiera previa
 killall conky
-USUARIO=$(whoami)
-##conky -c "/home/$USUARIO/.conky/Gotham/Gotham" &
-conky -c "/usr/share/vitalinux/conky/vitalinux/fecha" &
-conky -c "/usr/share/vitalinux/conky/vitalinux/hd" &
-conky -c "/usr/share/vitalinux/conky/vitalinux/ram" &
-conky -c "/usr/share/vitalinux/conky/vitalinux/cpu" &
-conky -c "/usr/share/vitalinux/conky/vitalinux/cid" &
-conky -c "/usr/share/vitalinux/conky/vitalinux/uid" &
+conky -c "/usr/share/vitalinux/conky/circle/conkyrc" &
+#conky -c "/usr/share/vitalinux/conky/vitalinux/fecha" &
+#conky -c "/usr/share/vitalinux/conky/vitalinux/hd" &
+#conky -c "/usr/share/vitalinux/conky/vitalinux/ram" &
+#conky -c "/usr/share/vitalinux/conky/vitalinux/cpu" &
+#conky -c "/usr/share/vitalinux/conky/vitalinux/cid" &
+#conky -c "/usr/share/vitalinux/conky/vitalinux/uid" &

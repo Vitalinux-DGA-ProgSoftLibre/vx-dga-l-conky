@@ -8,7 +8,7 @@ Homepage: http://wiki.vitalinux.educa.aragon.es
 
 Package: vx-dga-l-conky
 Architecture: all
-Pre-Depends: compton, vx-dga-l-compton, conky-manager, conky-all
-Depends: ${misc:Depends}, vx-dga-l-scripts
+Pre-Depends: conky-all
+Depends: ${misc:Depends}
 Description: Conky personalizado para Lubuntu Vitalinux
  Conky personalizado para Lubuntu Vitalinux mostrando información del sistema en el Escritorio
