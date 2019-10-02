@@ -27,15 +27,18 @@ case "$1" in
 	if test -f /usr/bin/migasfree-cid ; then
 		chmod +x /usr/bin/migasfree-cid
 	fi
-	# Limpiamos del skel versiones anteriores .conky para que ya no se creen a los nuevos
-	# usuarios o congelaciones
-	if [ -d /etc/skel/.conky ]; then
-		rm -rf /etc/skel/.conky
+
+	# Intentamos modificar la interfaz eth0 por la activa...
+	FILECONKY="/usr/share/vitalinux/conky/circle/conkyrc"
+	FILELUA="/usr/share/vitalinux/conky/.lua/scripts/clock_rings.lua"
+	INTPRINCIPAL="$(ip route list | grep default | awk '{print $5}' | head -1)"
+
+	if [ "${INTPRINCIPAL}" != "" ]; then
+		for FILE in "${FILECONKY}" "${FILELUA}"; do
+			sed -i --follow-symlinks "s/eth0/$INTPRINCIPAL/g" $FILE
+		done
 	fi
 
-	# Las configuraaciones previas por usuario si las hubiera se habrán borrado con la update
-	# De todas formas "no molestan".
-	#USERGRAF=$(who | grep " :0 " | cut -d" " -f1)
 	USERGRAF=$(vx-usuario-grafico)
 	if [ -n "$USERGRAF" ] && (id "$USERGRAF" &> /dev/null) ; then
 		sleep 2

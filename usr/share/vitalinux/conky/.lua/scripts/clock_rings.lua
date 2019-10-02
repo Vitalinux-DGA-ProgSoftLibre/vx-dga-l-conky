@@ -108,7 +108,7 @@ settings_table = {
         bg_alpha=0.2,
         fg_colour=0xFF6600,
         fg_alpha=0.8,
-        x=50, y=300,
+        x=60, y=280,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -122,26 +122,26 @@ settings_table = {
         bg_alpha=0.2,
         fg_colour=0xFF6600,
         fg_alpha=0.8,
-        x=75, y=350,
+        x=85, y=330,
         radius=25,
         thickness=5,
         start_angle=-90,
         end_angle=180
     },
-    {
-        name='swapperc',
-        arg='',
-        max=100,
-        bg_colour=0xffffff,
-        bg_alpha=0.2,
-        fg_colour=0xFF6600,
-        fg_alpha=0.8,
-        x=100, y=400,
-        radius=25,
-        thickness=5,
-        start_angle=-90,
-        end_angle=180
-    },
+    -- {
+    --     name='swapperc',
+    --     arg='',
+    --     max=100,
+    --     bg_colour=0xffffff,
+    --     bg_alpha=0.2,
+    --     fg_colour=0xFF6600,
+    --     fg_alpha=0.8,
+    --     x=100, y=400,
+    --     radius=25,
+    --     thickness=5,
+    --     start_angle=-90,
+    --     end_angle=180
+    -- },
     {
         name='fs_used_perc',
         arg='/',
@@ -150,7 +150,7 @@ settings_table = {
         bg_alpha=0.2,
         fg_colour=0xFF6600,
         fg_alpha=0.8,
-        x=125, y=450,
+        x=110, y=380,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -164,7 +164,7 @@ settings_table = {
         bg_alpha=0.2,
         fg_colour=0x339900,
         fg_alpha=0.8,
-        x=150, y=500,
+        x=135, y=430,
         radius=25,
         thickness=4,
         start_angle=-90,
@@ -178,12 +178,13 @@ settings_table = {
         bg_alpha=0.2,
         fg_colour=0xff6600,
         fg_alpha=0.8,
-        x=150, y=500,
+        x=135, y=430,
         radius=20,
         thickness=4,
         start_angle=-90,
         end_angle=180
     },
+
 }
 
 -- Use these settings to define the origin and extent of your clock.
