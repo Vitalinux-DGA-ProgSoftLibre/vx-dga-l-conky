@@ -18,18 +18,18 @@ text_buffer_size 2048
 own_window yes
 own_window_type normal
 own_window_transparent yes
-own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
 
 
-border_inner_margin 0
-border_outer_margin 0
+border_inner_margin 3
+border_outer_margin 3
 
-minimum_size 200 250
+#minimum_size 200 250
 maximum_width 200
 
-alignment tr
-gap_x 35
-gap_y 55
+alignment mr
+gap_x 15
+gap_y 15
 
 # Graphics settings #
 draw_shades no
@@ -44,7 +44,7 @@ xftalpha 0.5
 
 uppercase no
 
-temperature_unit celsius
+#temperature_unit celsius
 
 
 default_color FFFFFF
@@ -72,13 +72,10 @@ ${color FFFFFF}${goto 125}${voffset 25}${downspeed eth0}
 ${color FFFFFF}${goto 125}${upspeed eth0}
 ${color FF6600}${goto 125}NET
 
-
-
-${color FFFFFF}${font caviar dreams:size=8}Uptime: ${uptime_short}
-${color FFFFFF}${font caviar dreams:size=8}Processes: ${processes}
-${color FFFFFF}${font caviar dreams:size=8}Running: ${running_processes}
-
+#${color FFFFFF}${font caviar dreams:size=8}Uptime: ${uptime_short}
+#${color FFFFFF}${font caviar dreams:size=8}Processes: ${processes}
+#${color FFFFFF}${font caviar dreams:size=8}Running: ${running_processes}
 
 ${color FF6600}${font caviar dreams:size=12}${alignr}Machine: ${nodename}
 ${color FF6600}${font caviar dreams:size=12}${alignr}User: ${exec vx-usuario-grafico}
-#${color FF6600}${font caviar dreams:size=12}${alignr}Kernel: ${kernel}
+${color FF6600}${font caviar dreams:size=12}${alignr}Kernel: ${kernel}

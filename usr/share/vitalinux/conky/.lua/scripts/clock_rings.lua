@@ -282,6 +282,8 @@ function conky_clock_rings()
         str=string.format('${%s %s}',pt['name'],pt['arg'])
         str=conky_parse(str)
         
+        str=str:gsub("%.","%,")
+        
         value=tonumber(str)
         pct=value/pt['max']
         
