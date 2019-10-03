@@ -1,3 +1,9 @@
+vx-dga-l-conky (2.0-3) unstable; urgency=low
+
+  * Ajustes finales de visión
+
+ -- Ignacio Sancho <sannacho@gmail.com>  Wed, 17 Sep 2019 07:45:06 +0200
+
 vx-dga-l-conky (2.0-2) unstable; urgency=low
 
   * Adpatación a las nuevas especificaciones de conky 10

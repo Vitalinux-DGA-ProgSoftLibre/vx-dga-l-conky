@@ -15,8 +15,8 @@ conky.config = {
 	no_buffers = true,
 	text_buffer_size = 2048,
 
-	gap_x = 15,
-	gap_y = 15,
+	gap_x = 10,
+	gap_y = 10,
 	minimum_width = 200, minimum_height = 450,
 	maximum_width = 200,
 	own_window = true,
@@ -24,8 +24,8 @@ conky.config = {
 	own_window_argb_visual = true,
 	own_window_transparent = true,
 	own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
-	border_inner_margin = 3,
-	border_outer_margin = 3,
+	border_inner_margin = 2,
+	border_outer_margin = 2,
 	alignment = 'middle_right',
 
     draw_shades = false,
@@ -54,20 +54,19 @@ conky.config = {
 conky.text = [[
 ${voffset 8}${color FF6600}${font caviar dreams:size=16}${time %A}${font}${voffset -8}${alignr 50}${color FFFFFF}${font caviar dreams:size=38}${time %e}${font}
 ${color FFFFFF}${voffset -30}${color FFFFFF}${font caviar dreams:size=18}${time %b}${font}${voffset -3} ${color FFFFFF}${font caviar dreams:size=20}${time %Y}${font}${color FF6600}${hr}
-${image /usr/share/vitalinux/conky/conky_icons/vitalinux.png -p 60,115 -s 70x60}
-${voffset 140}${font caviar dreams:size=12}${alignr}CID - ${execi 180 migasfree-cid}${font}
-${color FFFFFF}${goto 35}${voffset 35}${cpu cpu0}%
+${image /usr/share/vitalinux/conky/conky_icons/vitalinux.png -p 70,125 -s 70x60}
+
+${color FFFFFF}${goto 35}${voffset 184}${cpu cpu0}%
 ${color FF6600}${goto 35}CPU
-${color FFFFFF}${goto 60}${voffset 23}${memperc}%
-${color FF6600}${goto 60}RAM
-${color FFFFFF}${goto 85}${voffset 23}${fs_used_perc /}%
-${color FF6600}${goto 85}DISK
-${color FFFFFF}${goto 110}${voffset 25}${downspeed eth0}
-${color FFFFFF}${goto 110}${upspeed eth0}
-${color FF6600}${goto 110}NET
+${color FFFFFF}${goto 63}${voffset 33}${memperc}%
+${color FF6600}${goto 63}RAM
+${color FFFFFF}${goto 87}${voffset 34}${fs_used_perc /}%
+${color FF6600}${goto 87}DISK
+${color FFFFFF}${goto 100}${voffset 35}${upspeed eth0}
+${color FFFFFF}${goto 100}${downspeed eth0}${color FF6600}NET
 
 
-${color FF6600}${font caviar dreams:size=12}${alignr}${nodename_short}
-${color FF6600}${font caviar dreams:size=12}${alignr}User: ${exec vx-usuario-grafico}
+${color FFFFFF}${font caviar dreams:size=11}CID: ${color FF6600}${font caviar dreams:size=12}${execi 180 migasfree-cid}
+${color FFFFFF}${font caviar dreams:size=11}USER: ${color FF6600}${font caviar dreams:size=12}${exec vx-usuario-grafico}
+${color FF6600}${font caviar dreams:size=12}${nodename_short}
 ]];
-
