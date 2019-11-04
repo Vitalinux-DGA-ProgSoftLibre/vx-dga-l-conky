@@ -1,3 +1,9 @@
+vx-dga-l-conky (2.0-5) unstable; urgency=low
+
+  * Ajuste valores máximos de los anillos en red, para que sean algo más realistas
+
+ -- Ignacio Sancho <sannacho@gmail.com>  Mon, 4 Nov 2019 07:45:06 +0200
+
 vx-dga-l-conky (2.0-4) unstable; urgency=low
 
   * Ajuste derecho del día

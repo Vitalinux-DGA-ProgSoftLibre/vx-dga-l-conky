@@ -159,7 +159,7 @@ settings_table = {
         {
         name='downspeedf',
         arg='eth0',
-        max=100,
+        max=10000,
         bg_colour=0xffffff,
         bg_alpha=0.2,
         fg_colour=0x339900,
@@ -173,7 +173,7 @@ settings_table = {
         {
         name='upspeedf',
         arg='eth0',
-        max=100,
+        max=1000,
         bg_colour=0xffffff,
         bg_alpha=0.2,
         fg_colour=0xff6600,
