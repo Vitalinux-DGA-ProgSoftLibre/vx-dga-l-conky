@@ -1,3 +1,9 @@
+vx-dga-l-conky (2.0-7) unstable; urgency=low
+
+  * Icono y descripción de lanzador para reiniciar widget
+
+ -- Ignacio Sancho <sannacho@gmail.com>  Tue, 3 Dic 2019 20:45:06 +0200
+
 vx-dga-l-conky (2.0-6) unstable; urgency=low
 
   * Se define transparencia para ajustar el widget a compton sin shadow
