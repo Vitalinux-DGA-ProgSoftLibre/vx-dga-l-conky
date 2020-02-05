@@ -32,8 +32,11 @@ case "$1" in
         FILECONKY="/usr/share/vitalinux/conky/circle/conkyrc"
         FILELUA="/usr/share/vitalinux/conky/.lua/scripts/clock_rings.lua"
         for FILE in "${FILECONKY}" "${FILELUA}"; do
-            chmod a+w $FILE
+            [ -f $FILE ] && chmod a+w $FILE
         done
+        # Y también se necesita en el directorio (fichero temporal de sed)
+        [ -d "/usr/share/vitalinux/conky/circle/" ] && chmod a+w "/usr/share/vitalinux/conky/circle/"
+        [ -d "/usr/share/vitalinux/conky/.lua/scripts/" ] && chmod a+w "/usr/share/vitalinux/conky/.lua/scripts/"
         
         USERGRAF=$(vx-usuario-grafico)
         if [ -n "$USERGRAF" ] && (id "$USERGRAF" &> /dev/null) ; then
