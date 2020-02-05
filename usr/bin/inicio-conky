@@ -2,6 +2,19 @@
 ## Configuración de Aplicación Conky para Escritorio Vitalinux
 # Cerramos cualquier confguracion que hubiera previa
 killall conky
+
+# Chequeamos la interfaz de red para Conky_Cirlce
+FILECONKY="/usr/share/vitalinux/conky/circle/conkyrc"
+FILELUA="/usr/share/vitalinux/conky/.lua/scripts/clock_rings.lua"
+INTCONF="$(grep -oP 'upspeed \K\w+' $FILECONKY)"
+INTPRINCIPAL="$(ip route list | grep default | awk '{print $5}' | head -1)"
+
+if [ "${INTPRINCIPAL}" != "" ]; then
+    for FILE in "${FILECONKY}" "${FILELUA}"; do
+        sed -i --follow-symlinks "s/$INTCONF/$INTPRINCIPAL/g" $FILE || true
+    done
+fi
+
 conky -c "/usr/share/vitalinux/conky/circle/conkyrc" &
 #conky -c "/usr/share/vitalinux/conky/vitalinux/fecha" &
 #conky -c "/usr/share/vitalinux/conky/vitalinux/hd" &

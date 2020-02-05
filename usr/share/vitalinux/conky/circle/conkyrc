@@ -57,17 +57,16 @@ ${voffset 8}${color FF6600}${font caviar dreams:size=16}${time %A}${font}${voffs
 ${color FFFFFF}${voffset -30}${color FFFFFF}${font caviar dreams:size=18}${time %b}${font}${voffset -3} ${color FFFFFF}${font caviar dreams:size=20}${time %Y}${font}${color FF6600}${hr}
 ${image /usr/share/vitalinux/conky/conky_icons/vitalinux.png -p 70,125 -s 70x60}
 
-${color FFFFFF}${goto 35}${voffset 184}${cpu cpu0}%
-${color FF6600}${goto 35}CPU
-${color FFFFFF}${goto 63}${voffset 33}${memperc}%
-${color FF6600}${goto 63}RAM
-${color FFFFFF}${goto 87}${voffset 34}${fs_used_perc /}%
-${color FF6600}${goto 87}DISK
-${color FFFFFF}${goto 100}${voffset 35}${upspeed eth0}
-${color FFFFFF}${goto 100}${downspeed eth0}${color FF6600}NET
+${color FF6600}${voffset 164}${goto 35}CPU
+${color FFFFFF}${goto 35}${cpu cpu0}%
+${color FF6600}${voffset 33}${alignr 120}${memperc}% RAM
+${color FFFFFF}${alignr 120}$memmax
+${color FF6600}${voffset 34}${alignr 93}${fs_used_perc /}% DISCO
+${color FFFFFF}${alignr 93}${fs_size /}
+${color FFFFFF}${voffset 35}${alignr 66}${upspeed enp0s3}${color FF6600}RED
+${color FFFFFF}${alignr 87}${downspeed enp0s3}
 
-
-${color FFFFFF}${font caviar dreams:size=11}CID: ${color FF6600}${font caviar dreams:size=12}${execi 180 migasfree-cid}
-${color FFFFFF}${font caviar dreams:size=11}USER: ${color FF6600}${font caviar dreams:size=12}${exec vx-usuario-grafico}
-${color FF6600}${font caviar dreams:size=12}${nodename_short}
+${image /usr/share/vitalinux/conky/conky_icons/cid-circle.png -s 20x20 -p 5,477}${color FF6600}${goto 35}${font caviar dreams:size=12}${execi 180 migasfree-cid}
+${image /usr/share/vitalinux/conky/conky_icons/user-circle.png -s 20x20 -p 5,501}${color FF6600}${voffset 3}${goto 35}${font caviar dreams:size=12}${exec vx-usuario-grafico}
+${image /usr/share/vitalinux/conky/conky_icons/computer-circle.png -s 20x20 -p 5,524}${color FF6600}${voffset 4}${goto 35}${font caviar dreams:size=12}${nodename_short}
 ]];

@@ -20,35 +20,31 @@ set -e
 
 case "$1" in
     configure)
-
-	if test -f /usr/bin/inicio-conky ; then
-		chmod +x /usr/bin/inicio-conky
-	fi
-	if test -f /usr/bin/migasfree-cid ; then
-		chmod +x /usr/bin/migasfree-cid
-	fi
-
-	# Intentamos modificar la interfaz eth0 por la activa...
-	FILECONKY="/usr/share/vitalinux/conky/circle/conkyrc"
-	FILELUA="/usr/share/vitalinux/conky/.lua/scripts/clock_rings.lua"
-	INTPRINCIPAL="$(ip route list | grep default | awk '{print $5}' | head -1)"
-
-	if [ "${INTPRINCIPAL}" != "" ]; then
-		for FILE in "${FILECONKY}" "${FILELUA}"; do
-			sed -i --follow-symlinks "s/eth0/$INTPRINCIPAL/g" $FILE
-		done
-	fi
-
-	USERGRAF=$(vx-usuario-grafico)
-	if [ -n "$USERGRAF" ] && (id "$USERGRAF" &> /dev/null) ; then
-		sleep 1
-		su -c "/usr/bin/inicio-conky &> /dev/null" --login "$USERGRAF" || exit 0
-	fi
+        
+        if test -f /usr/bin/inicio-conky ; then
+            chmod +x /usr/bin/inicio-conky
+        fi
+        if test -f /usr/bin/migasfree-cid ; then
+            chmod +x /usr/bin/migasfree-cid
+        fi
+        
+        # Los usuarios deben poder modificar los ficheros de configuración, para modificar la interfaz
+        FILECONKY="/usr/share/vitalinux/conky/circle/conkyrc"
+        FILELUA="/usr/share/vitalinux/conky/.lua/scripts/clock_rings.lua"
+        for FILE in "${FILECONKY}" "${FILELUA}"; do
+            chmod a+w $FILE
+        done
+        
+        USERGRAF=$(vx-usuario-grafico)
+        if [ -n "$USERGRAF" ] && (id "$USERGRAF" &> /dev/null) ; then
+            sleep 1
+            su -c "/usr/bin/inicio-conky &> /dev/null" --login "$USERGRAF" || exit 0
+        fi
     ;;
-
+    
     abort-upgrade|abort-remove|abort-deconfigure)
     ;;
-
+    
     *)
         echo "postinst called with unknown argument \`$1'" >&2
         exit 1

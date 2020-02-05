@@ -13,6 +13,7 @@ Changelog:
 + v1.0 -- Original release (30.09.2009)
    v1.1p -- Jpope edit londonali1010 (05.10.2009)
 *v 2011mint -- reEdit despot77 (18.02.2011)
+*v 2020vitalinux -- Nacho Sancho
 ]]
 
 settings_table = {
@@ -108,7 +109,7 @@ settings_table = {
         bg_alpha=0.2,
         fg_colour=0xFF6600,
         fg_alpha=0.8,
-        x=60, y=280,
+        x=60, y=260,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -122,7 +123,7 @@ settings_table = {
         bg_alpha=0.2,
         fg_colour=0xFF6600,
         fg_alpha=0.8,
-        x=90, y=340,
+        x=90, y=320,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -150,7 +151,7 @@ settings_table = {
         bg_alpha=0.2,
         fg_colour=0xFF6600,
         fg_alpha=0.8,
-        x=115, y=400,
+        x=115, y=380,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -164,7 +165,7 @@ settings_table = {
         bg_alpha=0.2,
         fg_colour=0x339900,
         fg_alpha=0.8,
-        x=140, y=460,
+        x=140, y=440,
         radius=25,
         thickness=4,
         start_angle=-90,
@@ -178,7 +179,7 @@ settings_table = {
         bg_alpha=0.2,
         fg_colour=0xff6600,
         fg_alpha=0.8,
-        x=140, y=460,
+        x=140, y=440,
         radius=20,
         thickness=4,
         start_angle=-90,
