@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Restart Desktop Widget
+Name[en]=Restart Desktop Widget
 Name[es]=Reiniciar Widget Escritorio
 Name[es_ES]=Reiniciar Widget Escritorio
 Comment=Restart Vitalinux Widget to actual screen
+Comment[en]=Restart Vitalinux Widget to actual screen
 Comment[es]=Reinicia el Widget de Vitalinux a la resolución actual
 Comment[es_ES]=Reinicia el Widget de Vitalinux a la resolución actual
 Exec=/usr/bin/inicio-conky
