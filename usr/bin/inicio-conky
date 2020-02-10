@@ -9,7 +9,7 @@ FILELUA="/usr/share/vitalinux/conky/.lua/scripts/clock_rings.lua"
 INTCONF="$(grep -oP 'upspeed \K\w+' $FILECONKY)"
 INTPRINCIPAL="$(ip route list | grep default | awk '{print $5}' | head -1)"
 
-if [ "${INTPRINCIPAL}" != "" ]; then
+if [ "${INTPRINCIPAL}" != "" ] && [ "${INTPRINCIPAL}" != "${INTCONF}" ]; then
     for FILE in "${FILECONKY}" "${FILELUA}"; do
         sed -i --follow-symlinks "s/$INTCONF/$INTPRINCIPAL/g" $FILE || true
     done
