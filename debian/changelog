@@ -1,3 +1,10 @@
+vx-dga-l-conky (2.0-9) unstable; urgency=low
+
+  * Soluciona el problema de no tener la misma interfaz en los dos ficheros de configuración
+  * La escala para el downspeed es de hasta 500Mbits/s
+
+ -- Ignacio Sancho <sannacho@gmail.com>  Wed, 11 Nov 2020 13:45:06 +0200
+
 vx-dga-l-conky (2.0-8) unstable; urgency=low
 
   * Mejoras de estilo
