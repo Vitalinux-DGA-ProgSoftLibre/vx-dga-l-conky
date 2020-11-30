@@ -3,9 +3,10 @@
 # Cerramos cualquier confguracion que hubiera previa
 killall conky
 
-# Chequeamos la interfaz de red para Conky_Cirlce
 FILECONKY="/usr/share/vitalinux/conky/circle/conkyrc"
 FILELUA="/usr/share/vitalinux/conky/.lua/scripts/clock_rings.lua"
+
+# Chequeamos la interfaz de red para Conky_Cirlce
 INTCONF="$(grep -oP 'upspeed \K\w+' $FILECONKY)"
 INTPRINCIPAL="$(ip route list | grep default | awk '{print $5}' | head -1)"
 
@@ -14,5 +15,18 @@ if [ "${INTPRINCIPAL}" != "" ] && [ "${INTPRINCIPAL}" != "${INTCONF}" ]; then
         sed -i --follow-symlinks "s/$INTCONF/$INTPRINCIPAL/g" $FILE || true
     done
 fi
+
+# Locale para posicion del concky
+USUARIOGRAF="$(vx-usuario-grafico)"
+LOCALEACTUAL=$(set -o pipefail; grep Language /var/lib/AccountsService/users/${USUARIOGRAF} | awk -F'=' '{print $2}' || echo "es")
+LOCALESLEFT="ar"
+if [[ "$LOCALESLEFT" =~ $LOCALEACTUAL ]]; then
+    # Conky a la izda
+    sed -i --follow-symlinks "s/alignment.*/alignment = 'middle_left',/g" "${FILECONKY}"
+else
+    # Conky by default
+    sed -i --follow-symlinks "s/alignment.*/alignment = 'middle_right',/g" "${FILECONKY}"
+fi
+
 
 conky -c "/usr/share/vitalinux/conky/circle/conkyrc" &
